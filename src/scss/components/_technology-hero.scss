@@ -1,0 +1,220 @@
+.technology-hero {
+  background-image: url(../img/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  @include small-tablet {
+    background-image: url(../img/background-technology-tablet.jpg);
+  }
+
+  @include mobile {
+    background-image: url(../img/background-technology-mobile.jpg);
+  }
+
+  &__title {
+    padding-top: 212px;
+    margin-bottom: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &--focus {
+      margin-right: 15px;
+      font-weight: 700;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+    }
+
+    @include small-tablet {
+      padding-top: 120px;
+      margin-bottom: 70px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 19px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__inner {
+    max-width: 475px;
+    padding-left: 150px;
+
+    @include small-tablet {
+      padding: 0;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 15px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--lavender-color);
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 17px;
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    color: var(--light-color);
+
+    @include small-tablet {
+      text-align: center;
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+
+  &__text {
+    max-width: 444px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--lavender-color);
+
+    @include small-tablet {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  &__img {
+
+    @include small-tablet {
+      margin-bottom: 200px;
+
+    }
+
+    @include mobile {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    height: 527px;
+
+    @include small-tablet {
+      height: 800px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    bottom: -230px;
+    z-index: 111;
+
+    @include small-tablet {
+      bottom: 250px;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include mobile {
+      bottom: -50px;
+    }
+  }
+
+  &__bullet {
+    margin: 0px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #fff;
+    border-color: rgba(#ffff, .25);
+    border-radius: 50%;
+    opacity: 1;
+    background-color: inherit;
+
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--light-color);
+
+    &:not(:last-child) {
+      margin-bottom: 32px !important;
+
+      @include small-tablet {
+        margin: 0px 16px 0px 0px !important;
+      }
+    }
+
+    &:hover {
+      border-color: rgba(#ffff, 1);
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    @include small-tablet {
+      font-size: 24px;
+      width: 60px;
+      height: 60px;
+    }
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__bullet.swiper-pagination-bullet-active {
+    background-color: var(--light-color);
+    color: #000;
+  }
+}

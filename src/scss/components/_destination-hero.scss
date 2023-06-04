@@ -1,0 +1,299 @@
+.destination-hero {
+  background-image: url(../img/background-destination-desktop.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include small-tablet {
+    background-image: url(../img/background-destination-tablet.jpg);
+    background-size: cover;
+  }
+
+  @include mobile {
+    background-image: url(../img/background-destination-mobile.jpg);
+  }
+
+  &__title {
+    padding-top: 212px;
+    margin-bottom: 100px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &--focus {
+      margin-right: 15px;
+      font-weight: 700;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+    }
+
+    @include small-tablet {
+      padding-top: 110px;
+      margin-bottom: 60px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 19px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    padding: 70px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    max-width: 573px;
+  }
+
+
+  &__img {
+    margin-left: 160px;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 120px;
+    }
+
+    @include mobile {
+      width: 170px;
+      height: 170px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    font-family: 'Bellefair', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 115px;
+    color: var(--light-color);
+
+    @include small-tablet {
+      text-align: center;
+      font-size: 80px;
+      line-height: 91px;
+    }
+
+    @include mobile {
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-bottom: 54px;
+    margin-bottom: 60px;
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--lavender-color);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #383B4B;
+    }
+
+    @include small-tablet {
+      text-align: center;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  &__parametrs {
+    display: flex;
+
+    @include small-tablet {
+      justify-content: space-around;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
+  &__distance {
+    position: relative;
+    margin-right: 150px;
+    font-family: 'Bellefair', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &::before {
+      content: 'AVG. DISTANCE';
+      position: absolute;
+      top: -28px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      text-transform: uppercase;
+      color: var(--lavender-color);
+    }
+
+    @include small-tablet {
+      margin: 0;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin: 0;
+      margin-bottom: 60px;
+
+      &::before {
+        left: calc(50% - 50px);
+
+      }
+    }
+  }
+
+  &__time {
+    position: relative;
+    display: inline-block;
+    max-width: 155px;
+    width: 100%;
+    font-family: 'Bellefair', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &::before {
+      content: 'Est. travel time';
+      position: absolute;
+      top: -28px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      text-transform: uppercase;
+      color: var(--lavender-color);
+    }
+
+    @include small-tablet {
+      text-align: center;
+
+    }
+
+    @include mobile {
+      margin: 0;
+      align-items: center;
+      max-width: 365px;
+
+      &::before {
+        left: calc(50% - 60px);
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    display: flex;
+    max-width: 280px;
+    max-height: 34px;
+    right: 290px;
+    top: 0;
+    left: initial !important;
+    z-index: 5;
+
+    @include small-tablet {
+      right: calc(50% - 140px);
+      top: 53%;
+    }
+
+    @include mobile {
+      top: 28%;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    padding-bottom: 43px;
+  }
+
+  &__bullet {
+    margin: 0 !important;
+    padding-bottom: 12px;
+    width: 100%;
+    height: 30px;
+    background-color: initial;
+    opacity: 1;
+    border-radius: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--lavender-color);
+    border-bottom: 3px solid;
+    border-color: rgba(#ffff, .0);
+    transition: border-color 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 37px !important;
+    }
+
+    &:hover {
+      border-color: rgba(#ffff, .5);
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+
+  }
+
+  &__bullet.swiper-pagination-bullet-active {
+    color: var(--light-color);
+    border-color: rgba(#ffff, 1.0);
+  }
+
+
+}

@@ -1,0 +1,155 @@
+.hero {
+  background-image: url(../img/background-home-desktop.jpg);
+  height: 100vh;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include small-tablet {
+    background-image: url(../img/background-home-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include mobile {
+    background-image: url(../img/background-home-mobile.jpg);
+  }
+
+  &__content {
+    padding-top: 500px;
+    max-width: 450px;
+
+    @include small-tablet {
+      text-align: center;
+      padding-top: 200px;
+      margin-bottom: 156px;
+    }
+
+    @include mobile {
+      margin-bottom: 95px;
+      padding-top: 150px;
+    }
+  }
+
+  &__descr {
+    font-family: 'Barlow Condensed';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    color: var(--lavender-color);
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+    }
+  }
+
+  &__title {
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 172px;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 80px;
+      line-height: 100px;
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__text {
+    font-family: 'Barlow';
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--lavender-color);
+
+    @include small-tablet {
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 143px;
+
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 91px;
+    }
+
+    @include mobile {
+      padding-bottom: 219px;
+    }
+
+  }
+
+  &__btn {
+    position: relative;
+    width: 274px;
+    height: 274px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    color: var(--dark-color);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background-color: var(--light-color);
+      bottom: calc(50% - 225px);
+      left: calc(50% - 225px);
+      border-radius: 50%;
+      mix-blend-mode: normal;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.1;
+      }
+    }
+
+    @include mobile {
+      width: 150px;
+      height: 150px;
+      font-size: 20px;
+      line-height: 23px;
+
+      &::before {
+        bottom: calc(50% - 125px);
+        left: calc(50% - 125px);
+      }
+    }
+  }
+}
